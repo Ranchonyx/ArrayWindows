@@ -1,5 +1,5 @@
 {
-  "name": "arraywindow",
+  "name": "@ranchonyx/arraywindow",
   "version": "1.0.0",
   "description": "Iterate over specifically sized array windows and potentially move them fwd or bkwd",
   "main": "ArrayWindow.js",
@@ -12,5 +12,13 @@
     "Window"
   ],
   "author": "Felix Janetzki",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ranchonyx/ArrayWindows.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ranchonyx/ArrayWindows/issues"
+  },
+  "homepage": "https://github.com/Ranchonyx/ArrayWindows#readme"
 }
