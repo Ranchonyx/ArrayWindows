@@ -1,0 +1,16 @@
+{
+  "name": "arraywindow",
+  "version": "1.0.0",
+  "description": "Iterate over specifically sized array windows and potentially move them fwd or bkwd",
+  "main": "ArrayWindow.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Array",
+    "Iterable",
+    "Window"
+  ],
+  "author": "Felix Janetzki",
+  "license": "ISC"
+}
