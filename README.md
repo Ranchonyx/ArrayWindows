@@ -12,7 +12,7 @@ ArrayWindows adds a new method to the `Array.prototype`, namely `Array.prototype
 
 ## Sample usage
 ```typescript
-import "./dist/ArrayWindow";
+import "@ranchonyx/arraywindow";
 const textArrayExample = "Hello, I am bored at work!".split("");
 
 for(let window of textArrayExample.windows(2)) {

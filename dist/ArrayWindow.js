@@ -75,9 +75,11 @@ class ArrayWindowIterator {
     }
 }
 exports.ArrayWindowIterator = ArrayWindowIterator;
-if (!Array.prototype.windows) {
-    Array.prototype.windows = function (windowSize) {
-        return new ArrayWindowIterator(this, windowSize);
-    };
-}
+(() => {
+    if (!Array.prototype.windows) {
+        Array.prototype.windows = function (windowSize) {
+            return new ArrayWindowIterator(this, windowSize);
+        };
+    }
+})();
 //# sourceMappingURL=ArrayWindow.js.map
