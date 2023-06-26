@@ -45,7 +45,7 @@ declare global {
         content(): T[];
     }
 }
-export default class ArrayWindow<T> extends Array<T> implements IArrayWindow<T> {
+export declare class ArrayWindow<T> extends Array<T> implements IArrayWindow<T> {
     private parentThisArg;
     private sliceIdx;
     private sliceLen;

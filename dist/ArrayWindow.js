@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ArrayWindowIterator = exports.WindowSizeError = void 0;
+exports.ArrayWindowIterator = exports.WindowSizeError = exports.ArrayWindow = void 0;
 class ArrayWindow extends Array {
     constructor(parentThisArg, sliceIdx, sliceLen) {
         super(...parentThisArg.slice(sliceIdx, sliceIdx + sliceLen));
@@ -35,7 +35,7 @@ class ArrayWindow extends Array {
         return `ArrayWindow`;
     }
 }
-exports.default = ArrayWindow;
+exports.ArrayWindow = ArrayWindow;
 class WindowSizeError extends Error {
     constructor(message) {
         super(message);

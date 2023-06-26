@@ -53,7 +53,7 @@ declare global {
     }
 }
 
-export default class ArrayWindow<T> extends Array<T> implements IArrayWindow<T> {
+export class ArrayWindow<T> extends Array<T> implements IArrayWindow<T> {
     private parentThisArg: any[];
     private sliceIdx: number;
     private sliceLen: number;
@@ -137,6 +137,17 @@ export class ArrayWindowIterator<T> implements Iterable<IArrayWindow<T>> {
 
     get [Symbol.toStringTag](): string {
         return `ArrayWindowIterator`;
+    }
+}
+
+
+declare global {
+    interface Array<T> {
+        /**
+         * @param {number}  size - The window size
+         * @returns An iterable over the windows
+         */
+        windows(size: number): ArrayWindowIterator<T>
     }
 }
 
