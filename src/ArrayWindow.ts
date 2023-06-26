@@ -112,9 +112,9 @@ export class ArrayWindowIterator<T> implements Iterable<IArrayWindow<T>> {
     private thisArg: Array<T>;
 
     constructor(thisArg: Array<T>, pSz: number) {
-        if (thisArg.length < 1) throw new RangeError("Cannot call Array.window on array with size less than 1!");
-        if (pSz > thisArg.length) throw new RangeError("Cannot call Array.window with a window size greater than the array size!")
-        if (pSz < 1) throw new WindowSizeError("Cannot call Array.window with a window size of less than 1!");
+        if (thisArg.length < 1) throw new RangeError("Cannot call Array.windows on array with size less than 1!");
+        if (pSz > thisArg.length) throw new RangeError("Cannot call Array.windows with a window size greater than the array size!")
+        if (pSz < 1) throw new WindowSizeError("Cannot call Array.windows with a window size of less than 1!");
         this.sz = pSz;
         this.thisArg = thisArg;
     }
