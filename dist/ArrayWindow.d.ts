@@ -69,3 +69,12 @@ export declare class ArrayWindowIterator<T> implements Iterable<IArrayWindow<T>>
     [Symbol.iterator](): IterableIterator<ArrayWindow<T>>;
     get [Symbol.toStringTag](): string;
 }
+declare global {
+    interface Array<T> {
+        /**
+         * @param {number}  size - The window size
+         * @returns An iterable over the windows
+         */
+        windows(size: number): ArrayWindowIterator<T>;
+    }
+}

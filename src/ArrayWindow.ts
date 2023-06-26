@@ -140,7 +140,6 @@ export class ArrayWindowIterator<T> implements Iterable<IArrayWindow<T>> {
     }
 }
 
-
 declare global {
     interface Array<T> {
         /**

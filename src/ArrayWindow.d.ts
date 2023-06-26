@@ -1,4 +1,4 @@
-export declare module ArrayWindows {
+declare module ArrayWindows {
     export interface IArrayWindow<T> extends Array<T> {
         /**
          * Checks wheter the slice is empty
@@ -44,6 +44,10 @@ export declare module ArrayWindows {
         content(): T[];
     }
 
+    export class WindowSizeError extends Error {
+
+    }
+
     export class ArrayWindow<T> extends Array<T> implements IArrayWindow<T> {
         isEmpty(): boolean;
         first(): T;
@@ -57,5 +61,25 @@ export declare module ArrayWindows {
     export class ArrayWindowIterator<T> implements Iterable<IArrayWindow<T>> {
         [Symbol.iterator](): IterableIterator<ArrayWindow<T>>;
         [Symbol.toStringTag](): string;
+    }
+
+    interface Array<T> {
+        /**
+         * @param {number}  size - The window size
+         * @returns An iterable over the windows
+         */
+        windows(size: number): ArrayWindows.ArrayWindowIterator<T>
+    }
+}
+
+export = ArrayWindows;
+
+declare global {
+    interface Array<T> {
+        /**
+         * @param {number}  size - The window size
+         * @returns An iterable over the windows
+         */
+        windows(size: number): ArrayWindows.ArrayWindowIterator<T>
     }
 }
